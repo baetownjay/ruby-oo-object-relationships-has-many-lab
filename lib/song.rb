@@ -2,8 +2,8 @@ require 'pry'
 require_relative 'artist'
 class Song
 
-    attr_reader :song, :songs
-    attr_accessor :artist
+    attr_reader :song #:songs
+    attr_accessor :artist, :songs
 
     @@all_songs = []
 
@@ -20,6 +20,7 @@ class Song
         @@all_songs
     end
     def add_song_by_name(name)
-        
+        song = Song.new(name)
+
     end
 end
