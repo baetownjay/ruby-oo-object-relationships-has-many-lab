@@ -1,11 +1,12 @@
 require 'pry'
 
- require_relative 'song'
- require_relative 'artist'
- require_relative 'post'
- require_relative 'author'
+adele = Artist.new()
+drake = Artist.new()
 
-drake = Artist.new("Drake")
-diamonds = Song.new("Diamonds")
-diamonds.artist = drake
- #binding.pry
+jason = Author.new("Jason")
+astrid = Author.new("Astrid")
+
+jason1 = Post.new("HELLO WORLD")
+jason2 = Post.new("hungry!")
+astrid1 = Post.new("juice")
+astrid2 = Post.new("hola")
