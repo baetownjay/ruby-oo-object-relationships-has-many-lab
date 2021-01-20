@@ -1,26 +1,18 @@
 require 'pry'
-require_relative 'artist'
 class Song
+    attr_accessor :name, :song, :artist
 
-    attr_reader :song #:songs
-    attr_accessor :artist, :songs
-
-    @@all_songs = []
-
-    
-    def initialize(song)
-        @song = song
-        @songs = songs =[]
-        #binding.pry
-
-        @@all_songs << song
+    @@all = []
+    def initialize(name)
+        @name = name
+        @@all << self
     end
-    
-    def self.all_songs
-        @@all_songs
-    end
-    def add_song_by_name(name)
-        song = Song.new(name)
 
+    def self.all
+        @@all
+    end
+    def artist_name
+        self.artist ? self.artist.name : nil
     end
 end
+
